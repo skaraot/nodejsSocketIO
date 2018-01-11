@@ -1,0 +1,25 @@
+{
+  "author": "serkankaraot",
+  "name": "angularjs-socketio-node-sample",
+  "description": "Dialog application using AngularJS, Socket.IO, Sentencer, ExpressFW and NodeJs.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:skaraot/nodejsSocketIO.git"
+  },
+  "dependencies": {
+    "connect": "~2.3.3",
+    "express": "^4.16.2",
+    "sentencer": "^0.1.5",
+    "socket.io": "~0.9.6"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "0.6.x"
+  },
+  "scripts": {
+    "start": "server.js"
+  },
+  "subdomain": "angularTodo"
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dialog</title>
+  <!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="http://code.angularjs.org/angular-1.0.0.min.js"></script>
+  <link rel="stylesheet" href="/css/default.css"></link>
+  <script src="/js/controllers.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div ng-app="addToDialog">
+    <h2>Dialog</h2>
+    <div ng-controller="TodoCtrl">
+      <div class='hide'>
+        <span>{{remaining()}} of {{todos.length}} remaining</span>[ <a href="" ng-click="archive()">archive</a> ]
+      </div>
+      <ul class="unstyled hide">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done" ng-change="change()">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <p>
+      <textarea ng-model="sentenceList" style='width:350px;height:200px;' id='bottom'></textarea>
+      </p>
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new sentences">
+        <input class="btn-primary" type="submit" value="add" scroll-bottom="bottom">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
